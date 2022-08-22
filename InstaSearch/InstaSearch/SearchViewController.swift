@@ -19,6 +19,13 @@ class SearchViewController: UIViewController {
         if let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.estimatedItemSize = .zero
         }
+        
+        self.navigationItem.title = "Search"
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.searchBar.placeholder = "Type Here!"
+        searchController.searchResultsUpdater = self
+        self.navigationItem.searchController = searchController
     }
 }
 
@@ -54,3 +61,10 @@ extension SearchViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
+
+extension SearchViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        let search = searchController.searchBar.text
+        print("search: \(search)")
+    }
+}
