@@ -1,22 +1,22 @@
 //
-//  SearchCollectionViewCell.swift
+//  NewsFeedCollectionViewCell.swift
 //  InstaSearch
 //
-//  Created by Kay on 2022/08/22.
+//  Created by Kay on 2022/08/23.
 //
 
 import UIKit
 
-class SearchCollectionViewCell: UICollectionViewCell {
+class NewsFeedCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var thumbnailImageView: UIImageView!
     
-    override func prepareForReuse() { // UICollectionReusableView 안에있는 메서드
+    override func prepareForReuse() {
         super.prepareForReuse()
         thumbnailImageView.image = nil
     }
     
-    func configure(_ imageName: String) {
+    func configure(with imageName: String) {
         thumbnailImageView.image = UIImage(named: imageName)
     }
 }
