@@ -1,12 +1,13 @@
 # InstaSearch
-
-- UICollectionView with Storyboard!
+- UICollectionView with Storyboard
+- UITabBar Controller
+- UISearchController
 
 ## 🍎 작동 화면
 
-|뉴스피드 탭|서치 탭| 여러가지 탭|
+|5가지 탭 전시 | 뉴스피드 탭 | 서치 탭 |
 |:-:|:-:|:-:|
-| ![InstaSearchPlayNewsFeedGIF](https://user-images.githubusercontent.com/40224884/186312236-0cf77fb6-85d4-4182-8bde-3868ed2dc43b.gif) | ![InstaSearchPlaySearchGIF](https://user-images.githubusercontent.com/40224884/186311914-c534f494-f3a0-4bdf-a600-b4930021407f.gif) | ![](https://i.imgur.com/6F4xIaE.gif) |
+|![](https://i.imgur.com/6F4xIaE.gif) | ![InstaSearchPlayNewsFeedGIF](https://user-images.githubusercontent.com/40224884/186312236-0cf77fb6-85d4-4182-8bde-3868ed2dc43b.gif) | ![InstaSearchPlaySearchGIF](https://user-images.githubusercontent.com/40224884/186311914-c534f494-f3a0-4bdf-a600-b4930021407f.gif) | 
 
 ## 🍎 전체적인 화면 구성
 <img width="1920" alt="InstaSearchMap" src="https://user-images.githubusercontent.com/40224884/186313258-359b2e73-17d7-4bc5-8d9a-adeb7a832bdf.png">
@@ -65,3 +66,4 @@ class SearchViewController: UIViewController {
             print("search: \(search)")
         }
     }
+    ```
