@@ -1,4 +1,4 @@
-# InstaSearch
+# 5. InstaSearch
 - UICollectionView with Storyboard
 - UITabBar Controller
 - UISearchController
@@ -38,24 +38,24 @@ class SearchViewController: UIViewController {
     }
 }
 ```
-- self.navigationItem.title = "Search"
-    - 해당 VC의 네비게이션 아이템의 타이틀을 Search로 만들어준다
+- **self.navigationItem.title = "Search"**
+    - 해당 VC의 네비게이션 아이템의 타이틀을 Search로 설정.
 
-- let searchController = UISearchController(searchResultsController: nil)
-    - 이니셜라이저 인자로 searchResultsController를 넣을 수 있다(옵셔널). Jump to Definition으로 들어가서 보면,
+- **let searchController = UISearchController(searchResultsController: nil)**
+    - 이니셜라이저 인자로 searchResultsController를 넣을 수 있다(옵셔널 타입). Jump to Definition으로 들어가서 보면,
     - "Pass nil if you wish to display search results in the same view that you are searching."
     - 즉, nil로 설정하면 search controller를 생성한 VC에서 서칭과 결과를 둘 다 받는다는 이야기이고, nil 대신 특정 컨트롤러를 넣게된다면 해당 컨트롤러에서 결과를 받아 처리한다는 이야기이다.
 
-- searchController.hidesNavigationBarDuringPresentation = false
+- **searchController.hidesNavigationBarDuringPresentation = false**
     - search bar가 활성화 될 때 네비게이션 바를 숨길것인지 물어보는 프로퍼티.
 
-- searchController.searchBar.placeholder = "Type Here!"
+- **searchController.searchBar.placeholder = "Type Here!"**
     - 아무것도 입력하지 않았을때 사용자에게 무엇을 입력해야 하는지 유도하는 문자열.
 
-- self.navigationItem.searchController = searchController
+- **self.navigationItem.searchController = searchController**
     - 해당 VC의 네비게이션 아이템의 searchController 프로퍼티에 위에서 설정해준 searchController를 넣어준다.
  
-- searchController.searchResultsUpdater = self
+- **searchController.searchResultsUpdater = self**
     - SearchViewController가 UISearchResultsUpdating 프로토콜을 준수하겠다는 이야기.
     - 다른 말로 searchResultsUpdater에 대한 정보는 SearchViewController가 주겠다는 이야기.
     - 아래의 코드를 작성함으로써 준수한다.
