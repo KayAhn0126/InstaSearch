@@ -18,7 +18,7 @@
 - 맨 위에 탭 바 컨트롤러를 만들고 순서대로 홈, 서치, 비디오, 쇼핑, 프로필 탭을 구성.
 
 
-## 🍎 search view Controller
+## 🍎 UISearchController
 
 ```swift
 class SearchViewController: UIViewController {
